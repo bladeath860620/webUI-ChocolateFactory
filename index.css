@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  overflow: hidden;
+}
+#beginpage,
+#stoveDecide,
+#materialDecide {
+  position: relative;
+  height: 100%;
+}
+#beginpage .wrapper,
+#stoveDecide .wrapper,
+#materialDecide .wrapper {
+  height: 100%;
+}
+.intro {
+  height: 70%;
+  padding-top: 100px;
+  text-align: center;
+}
+.button-wrapper {
+  height: 30%;
+  padding-top: 50px;
+  text-align: center;
+}
+.button-wrapper #startbutton {
+  width: 140px;
+  height: 80px;
+  font: 24px bold;
+  line-height: 80px;
+}
+.button-wrapper :hover {
+  cursor: pointer;
+}
