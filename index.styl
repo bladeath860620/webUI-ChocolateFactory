@@ -1,4 +1,10 @@
 fullscreen = 100%
+midpos()
+  position: absolute
+  left: 50%
+  top: 50%
+
+bg-color = #2F0682
 
 html,body
   height: fullscreen
@@ -6,26 +12,73 @@ html,body
 
 body
   overflow: hidden
+  background-image url("chocolate.jpg")
 
-#beginpage,#stoveDecide,#materialDecide
-  position: relative
-  height: fullscreen
-  .wrapper
+
+#beginpage,#story,#stoveDecide,#materialDecide
+    position: relative
     height: fullscreen
 
-.intro
-  height: 70%
-  padding-top: 100px
-  text-align: center
+#beginpage
+  .wrapper
+    height: fullscreen
+    background: bg-color
+    opacity .8
+    z-index 99
+    .intro
+      height: 70%
+      padding-top: 100px
+      text-align: center
+    .button-wrapper
+      height: 30%
+      padding-top: 50px
+      text-align: center
+      #startbutton
+        width: 140px
+        height: 60px
+        font: 24px bold
+        line-height: @height;
+        background: #53E04C
+        border-radius 10px
+        border 1px solid #888
+        box-shadow 3px 5px 20px #aaa
+        transition all .3s ease
+        midpos()
+        margin-left -70px
+        margin-top -40px
+        &:hover
+          cursor: pointer
 
-.button-wrapper
-  height: 30%
-  padding-top: 50px
-  text-align: center
-  #startbutton
-    width: 140px
-    height: 80px
-    font: 24px bold
-    line-height: @height;
-  :hover
-    cursor: pointer
+
+#story
+  .wrapper
+    height fullscreen
+    background bg-color
+    opacity .8
+    .inner-story
+      height 85%
+    .button-wrapper
+      height 15%
+      #gobutton
+        height:50px
+        line-height:50px
+        vertical-align:middle
+        text-align:center
+        padding:0 16px
+        color: #fff
+        font-size: 24px
+        background-color:#007bff
+        position:relative
+        left: 80%
+        display:inline-block
+        &:after
+          position:absolute;
+          right:-34px;
+          content:" ";
+          width: 0px;
+          height: 0px;
+          border-style: solid;
+          border-width: 25px 0 25px 35px;
+          border-color: transparent transparent transparent #007bff;
+        &:hover
+          cursor: pointer
